@@ -16,13 +16,13 @@ const updateTuit = async (req, res) => {
  
  const updatedTuit = req.body;
  const status = await tuitsDao.updateTuit(tuitdIdToUpdate, updatedTuit);
- res.sendStatus(status);
+ res.send(status);
 }
 
 const deleteTuit = async (req, res) => {
  const tuitdIdToDelete = req.params.tid;
  const status = await tuitsDao.deleteTuit(tuitdIdToDelete);
- res.sendStatus(status);
+ res.send(status);
 }
 
 export default (app) => {
